@@ -1,0 +1,28 @@
+@import "./normalize.css";
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic&display=swap");
+  font-display: swap;
+}
+
+:root {
+  font-size: calc(0.2em + 1vw);
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Open Sans", sans-serif;
+}
+

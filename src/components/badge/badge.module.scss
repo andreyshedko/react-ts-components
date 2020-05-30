@@ -1,0 +1,20 @@
+@import '../../variables';
+
+.badge {
+    padding: $sm;
+    border-radius: 2px;
+    background-color: $warning;
+    text-decoration: none;
+    &_body {
+        color: $default;
+    }
+    &_warning {
+        background-color: $warning;
+    }
+    &_danger {
+        background-color: $danger;
+    }
+    &_info {
+        background-color: $info;
+    }
+}
