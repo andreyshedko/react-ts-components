@@ -26,3 +26,13 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  padding: 1rem;
+}
+
+.col-3 {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}

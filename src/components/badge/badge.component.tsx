@@ -9,7 +9,7 @@ export interface BadgeComponentProps {
   severity: string;
 }
 
-export const BadgeComponent = (props: BadgeComponentProps) => (
+export const BadgeComponent: React.FC<BadgeComponentProps> = (props: BadgeComponentProps) => (
   <NavLink
     className={[styles.badge , styles[`badge_${props.severity}`]].join(' ')}
     to={props.url}>
