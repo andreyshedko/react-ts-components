@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from './card.module.scss';
+import styles from './card.module.css';
 
 export interface CardComponentProps {
     imgUrl?: string;
@@ -14,24 +14,24 @@ export const CardComponent: React.FC<CardComponentProps> = (props: CardComponent
     <>
         <main className={styles.card}>
             {props.imgUrl &&
-                <section className={styles.card_img}>
+                <section className={styles.img}>
                     <img
                         src={props.imgUrl}
                         alt={props.title} />
                 </section>
             }
             <section className={styles.main}>
-                <div className={styles.header}>
+                <div className={''}>
                     <h3>{props.title}</h3>
                     {props.subTitle &&
                         <h5>{props.subTitle}</h5>
                     }
                 </div>
-                <div className={styles.body}>
+                <div className={''}>
                     {props.body}
                 </div>
                 {props.action &&
-                    <div className={styles.action}>
+                    <div className={''}>
                         {props.action}
                     </div>
                 }

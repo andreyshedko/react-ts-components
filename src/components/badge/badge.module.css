@@ -1,0 +1,21 @@
+@import "../../variables.css";
+
+.badge {
+    padding: var(--sm);
+    border-radius: 3px;
+    background-color: var(--warning);
+    text-decoration: none;
+}
+
+.badge .body {
+    color: var(--default);
+}
+.warning {
+    background-color: var(--warning);
+}
+.danger {
+    background-color: var(--danger);
+}
+.info {
+    background-color: var(--info);
+}

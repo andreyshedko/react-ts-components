@@ -1,0 +1,42 @@
+@import "../../variables.css";
+
+.button {
+    color: var(--gray-3);
+    border: 1px solid var(--gray-1);
+    border-radius: calc(var(--sm) / 6);
+    padding: calc(var(--sm) / 2);
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.button:hover {
+    background-color: darken(#fff, 5%);
+}
+
+.button:disabled {
+    color: var(--gray-1);
+    border: 1px solid var(--gray-1);
+}
+
+.button:disabled:hover {
+    cursor: not-allowed;
+}
+
+.warning {
+    color: var(--warning);
+    border: 1px solid var(--warning);
+}
+
+.danger {
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+.info {
+    color: var(--info);
+    border: 1px solid var(--info);
+}
+
+.with-icon svg {
+    margin-right: 0.5rem;
+}

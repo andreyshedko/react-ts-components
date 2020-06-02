@@ -6,8 +6,15 @@ import { utils } from "../../utils";
 
 const actions = () => (
     <>
-        <ButtonComponent text="Action 1" severity="danger" />
-        <ButtonComponent text="Action 2" severity="warning" />
+        <ButtonComponent 
+            text="Action 1" 
+            severity="danger"
+            disabled={true}
+            onClick={(e) => {console.log(e)}} />
+        <ButtonComponent 
+            text="Action 2" 
+            severity="warning"
+            onClick={(e) => {console.log(e)}} />
     </>
 )
 
