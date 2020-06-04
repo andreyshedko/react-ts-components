@@ -5,17 +5,19 @@ import { ButtonComponent } from "../../components/button/button.component";
 import { utils } from "../../utils";
 
 const actions = () => (
-    <>
+    <div className="col-2">
         <ButtonComponent 
             text="Action 1" 
             severity="danger"
             disabled={true}
-            onClick={(e) => {console.log(e)}} />
+            onClick={(e): any => {console.log(e)}}
+            onKeyDown={(e): any => {console.log(e)}} />
         <ButtonComponent 
             text="Action 2" 
             severity="warning"
-            onClick={(e) => {console.log(e)}} />
-    </>
+            onClick={(e): any => {console.log(e)}}
+            onKeyDown={(e): any => {console.log(e)}} />
+    </div>
 )
 
 export const CardInfoComponent:React.FC<{}> = () => {

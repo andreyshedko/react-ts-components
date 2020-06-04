@@ -10,7 +10,7 @@
 }
 
 .button:hover {
-    background-color: darken(#fff, 5%);
+    background-color: #f4f4f4;
 }
 
 .button:disabled {
@@ -25,6 +25,10 @@
 .warning {
     color: var(--warning);
     border: 1px solid var(--warning);
+}
+
+.button:focus {
+    background-color: #f0f0fb;
 }
 
 .danger {
