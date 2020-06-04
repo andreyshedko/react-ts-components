@@ -11,10 +11,14 @@
 div:last-of-type {
     margin-top: 1rem;
 }
-.img {
+.card.img {
     width: 100%;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+}
+img {
+    width: 100%;
+    height: auto;
 }
 .main {
     padding: var(--sm);
