@@ -27,6 +27,18 @@
     border: 1px solid var(--warning);
 }
 
+.button.warning:focus {
+   outline: none;
+}
+
+.button.info:focus {
+    outline: none;
+ }
+
+ .button.danger:focus {
+    outline: none;
+ }
+
 .button:focus {
     background-color: #f0f0fb;
 }

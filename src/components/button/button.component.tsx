@@ -1,4 +1,6 @@
 import * as React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './button.module.css';
 
@@ -6,7 +8,7 @@ export interface ButtonComponentProps {
   text: string;
   severity: string;
   disabled?: boolean;
-  icon?: string;
+  icon?: IconDefinition;
   onClick: (e: MouseEvent) => void;
   onKeyDown: (e: KeyboardEvent) => void;
 }
@@ -20,7 +22,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
     // onFocus={}
     disabled={props.disabled ?? false}>
     {props.icon &&
-      <i className={props.icon}></i>
+      <FontAwesomeIcon icon={props.icon} />
     }
     {props.text}
   </button>
