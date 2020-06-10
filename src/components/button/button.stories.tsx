@@ -1,18 +1,45 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
+import { actions } from '@storybook/addon-actions';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import { ButtonComponent } from './button.component';
 
 export default {
   component: ButtonComponent,
-  title: 'Button'
+  title: 'Button',
+  argTypes: { onClick: { action: 'clicked' } },
 };
 
-export const severityInfo = () => <ButtonComponent severity="info" text={"Test"} onClick={action('clicked')} onKeyDown={action('key down')} />;
+const eventsFromNames = actions('onClick', 'onKeyDown', 'onBlur');
 
-export const severityWarning = () =>  <ButtonComponent severity="warning" text={"Test"} onClick={action('clicked')} onKeyDown={action('key down')} />
+export const severityInfo = () =>
+  <ButtonComponent
+    severity="info" text={"Test"}
+    {...eventsFromNames} />;
 
-export const severityDanger = () =>  <ButtonComponent severity="danger" text={"Test"} onClick={action('clicked')} onKeyDown={action('key down')} />
+export const severityWarning = () =>
+  <ButtonComponent
+    severity="warning"
+    text={"Test"}
+    {...eventsFromNames} />
 
-export const withIcon = () => <ButtonComponent icon={faCoffee} severity="info" text={"Test"} onClick={action('clicked')} onKeyDown={action('key down')} />;
+export const severityDanger = () =>
+  <ButtonComponent
+    severity="danger"
+    text={"Test"}
+    {...eventsFromNames} />
+
+export const withIcon = () =>
+  <ButtonComponent
+    icon={faCoffee}
+    severity="info"
+    text={"Test"}
+    {...eventsFromNames} />;
+
+export const disabledButton = () =>
+  <ButtonComponent
+    icon={faCoffee}
+    severity="info"
+    disabled={true}
+    text={"Test"}
+    {...eventsFromNames} />;

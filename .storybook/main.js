@@ -1,9 +1,13 @@
+const path = require("path");
+
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
   addons: [
     '@storybook/preset-create-react-app',
     '@storybook/addon-actions',
     '@storybook/addon-links',
+    '@storybook/addon-info',
+    '@storybook/addon-storysource'
   ],
   webpackFinal: async config => {
     config.module.rules.push({
@@ -12,9 +16,11 @@ module.exports = {
         {
           loader: require.resolve('ts-loader'),
         },
-        // Optional
         {
           loader: require.resolve('react-docgen-typescript-loader'),
+          options: {
+            tsconfigPath: path.resolve(__dirname, "../tsconfig.json"),
+          },
         },
       ],
     });

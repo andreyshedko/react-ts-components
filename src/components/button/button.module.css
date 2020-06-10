@@ -7,6 +7,13 @@
     padding: calc(var(--sm) / 2);
     cursor: pointer;
     background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+button svg {
+    margin-right: .5rem;
 }
 
 .button:hover {
