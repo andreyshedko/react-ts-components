@@ -7,10 +7,9 @@ import { ButtonComponent } from './button.component';
 export default {
   component: ButtonComponent,
   title: 'Button',
-  argTypes: { onClick: { action: 'clicked' } },
 };
 
-const eventsFromNames = actions('onClick', 'onKeyDown', 'onBlur');
+const eventsFromNames = actions('onClick', 'onKeyDown', 'onFocus', 'onBlur');
 
 export const severityInfo = () =>
   <ButtonComponent
