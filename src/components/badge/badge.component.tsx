@@ -5,7 +5,6 @@ import styles from './badge.module.css';
 export interface BadgeComponentProps {
   text: string;
   severity: string;
-  url: string;
   onClick: (e: MouseEvent) => void;
   onKeyDown: (e: KeyboardEvent) => void;
 }

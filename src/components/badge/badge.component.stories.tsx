@@ -14,19 +14,16 @@ export const severityInfo = () =>
     <BadgeComponent
         severity="info"
         text={"Test"}
-        url={'#'}
         {...eventsFromNames} />;
 
 export const severityWarning = () =>
     <BadgeComponent
         severity="warning"
         text={"Test"}
-        url={'#'}
         {...eventsFromNames} />
 
 export const severityDanger = () =>
     <BadgeComponent
         severity="danger"
         text={"Test"}
-        url={'#'}
         {...eventsFromNames} />

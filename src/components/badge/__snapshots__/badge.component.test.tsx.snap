@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should display danger severity state 1`] = `
+<main
+  className="badge danger"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <section
+    className="body"
+  >
+    test
+  </section>
+</main>
+`;
+
+exports[`Button Component should display info severity state 1`] = `
+<main
+  className="badge info"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <section
+    className="body"
+  >
+    test
+  </section>
+</main>
+`;
+
+exports[`Button Component should display warning severity state 1`] = `
+<main
+  className="badge warning"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <section
+    className="body"
+  >
+    test
+  </section>
+</main>
+`;
