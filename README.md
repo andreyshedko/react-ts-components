@@ -1,9 +1,9 @@
 # List of components
 
 ## Done
-[ x ] Badge
-[ x ] Button
-[ x ] Card
+[x] Badge
+[x] Button
+[x] Card
 
 ## In Progress
 [ ] File Upload
