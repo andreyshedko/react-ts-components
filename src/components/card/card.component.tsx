@@ -7,32 +7,32 @@ export interface CardComponentProps {
     title: string;
     subTitle?: string;
     body: string;
-    action?: React.ReactElement
+    children?: React.ReactNode
 }
 
 export const CardComponent: React.FC<CardComponentProps> = (props: CardComponentProps) => (
     <>
         <main className={styles.card}>
             {props.imgUrl &&
-                <section className={styles.img}>
+                <>
                     <img
                         src={props.imgUrl}
                         alt={props.title} />
-                </section>
+                </>
             }
             <section className={styles.main}>
-                <div className={''}>
+                <>
                     <h3>{props.title}</h3>
                     {props.subTitle &&
-                        <h5>{props.subTitle}</h5>
+                        <h4>{props.subTitle}</h4>
                     }
-                </div>
-                <div className={''}>
+                </>
+                <div className={styles.body}>
                     {props.body}
                 </div>
-                {props.action &&
-                    <div className={''}>
-                        {props.action}
+                {props.children &&
+                    <div className={styles.actions}>
+                        {props.children}
                     </div>
                 }
             </section>

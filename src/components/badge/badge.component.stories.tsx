@@ -5,7 +5,7 @@ import { BadgeComponent } from './badge.component';
 
 export default {
     component: BadgeComponent,
-    title: 'Badge',
+    title: 'Badge Component',
 };
 
 const eventsFromNames = actions('onClick', 'onKeyDown');

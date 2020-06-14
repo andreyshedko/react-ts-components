@@ -6,7 +6,7 @@ import { ButtonComponent } from './button.component';
 
 export default {
   component: ButtonComponent,
-  title: 'Button',
+  title: 'Button Component',
 };
 
 const eventsFromNames = actions('onClick', 'onKeyDown', 'onFocus', 'onBlur');
