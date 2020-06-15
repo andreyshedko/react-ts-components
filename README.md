@@ -6,6 +6,7 @@
 [x] Card
 
 ## In Progress
+[ ] Accordion
 [ ] File Upload
 [ ] Tabs
 [ ] Date Picker
@@ -14,7 +15,6 @@
 [ ] Checkbox Group
 [ ] Radio Button
 [ ] Radio Button Group
-[ ] Accordion
 [ ] Dropdown
 [ ] Autocomplete
 [ ] Toast
@@ -22,4 +22,7 @@
 [ ] Spinner
 [ ] Progress Bar
 [ ] Sidebar
-[ ] Toggle 
+[ ] Toggle
+[ ] Slider
+[ ] Chip
+[ ] Badge Icon 

@@ -1,0 +1,42 @@
+@import "../../variables.css"; 
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic&display=swap");
+    font-display: swap;
+  }
+
+.accordion {
+    font-family: "OpenSans", sans-serif;
+}
+
+.accordion .head {
+    width: 100%;
+    min-height: 0.5rem;
+    background-color: var(--gray-3);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--sm)
+}
+
+.accordion .head .icon {
+    cursor: pointer;
+    margin-right: calc(var(--sm) / 2 );
+}
+
+.accordion .item {
+    width: 100%;
+    min-height: 1rem;
+    background-color: var(--gray-1);
+    padding: var(--sm);
+}
+
+.accordion .hidden {
+    display: none;
+}
+
+.accordion .visible {
+    display: initial;
+}

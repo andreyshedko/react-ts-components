@@ -7,7 +7,7 @@ export interface CardComponentProps {
     title: string;
     subTitle?: string;
     body: string;
-    children?: React.ReactNode
+    children?: React.ReactNode | React.ReactElement
 }
 
 export const CardComponent: React.FC<CardComponentProps> = (props: CardComponentProps) => (
