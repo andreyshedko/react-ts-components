@@ -1,7 +1,8 @@
 # List of components
 
 ## Done
-[ x ] Badge
+
+[x] Badge
 [ x ] Button
 [ x ] Card
 
