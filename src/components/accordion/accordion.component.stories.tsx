@@ -1,7 +1,6 @@
 import React from 'react';
-
 import { AccordionComponent } from './accordion.component';
-import { utils } from '../../utils';
+
 
 export default {
     component: AccordionComponent,
@@ -9,13 +8,21 @@ export default {
 };
 
 export const accordionComponent = () =>
-    <AccordionComponent
-        items={[
-            {
-                title: 'Head Title',
-                body: {
-                    title: 'Body Title',
-                    element: utils.lorem
-                }
-            }
-        ]} />;
+    <AccordionComponent items={[
+        {
+            title: 'Test Title 1',
+            body: {
+                title: 'Body Title 1',
+                element: 'sasasasasasasass'
+            },
+            isOpened: false
+        },
+        {
+            title: 'Test Title 2',
+            body: {
+                title: 'Body Title 2',
+                element: 'sasasasasasasass'
+            },
+            isOpened: false
+        }
+    ]} />;

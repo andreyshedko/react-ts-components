@@ -1,36 +1,41 @@
 @import "../../variables.css"; 
 
 @font-face {
-    font-family: "OpenSans";
+    font-family: "Open Sans";
     src: url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic&display=swap");
     font-display: swap;
   }
 
 .accordion {
-    font-family: "OpenSans", sans-serif;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
 }
 
 .accordion .head {
-    width: 100%;
     min-height: 0.5rem;
-    background-color: var(--gray-3);
+    background-color: var(--gray-2);
+    border-bottom: 1px solid var(--gray-3);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding: var(--sm)
+    padding-left: calc(var(--sm) / 2);
+    cursor: pointer;
 }
 
 .accordion .head .icon {
-    cursor: pointer;
     margin-right: calc(var(--sm) / 2 );
 }
 
 .accordion .item {
-    width: 100%;
     min-height: 1rem;
     background-color: var(--gray-1);
     padding: var(--sm);
+}
+
+.accordion .item_body {
+    max-width: calc(100% - 1rem);
+    min-height: 1rem;
 }
 
 .accordion .hidden {

@@ -1,12 +1,14 @@
 # List of components
 
 ## Done
+- [x] Accordion
 - [x] Badge
 - [x] Button
 - [x] Card
 
 ## In Progress
-- [ ] Accordion
+- [ ] Badge Icon 
+
 - [ ] File Upload
 - [ ] Tabs
 - [ ] Date Picker
@@ -25,4 +27,3 @@
 - [ ] Toggle
 - [ ] Slider
 - [ ] Chip
-- [ ] Badge Icon 

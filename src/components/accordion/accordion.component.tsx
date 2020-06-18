@@ -1,50 +1,58 @@
-import React, { useState } from "react";
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import React, { PureComponent } from "react";
 
-import styles from './accordion.module.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-export interface AccordionItem {
-  title: string;
-  body: {
-    title: string;
-    element: string | React.ReactElement | React.ReactNode;
-  }
-}
+import { AccordionItemComponent, AccordionItem } from "../accordion-item/accordion-item.component";
 
 export interface AccordionComponentProps {
-  items: AccordionItem[];
+    items: AccordionItem[];
 }
 
-export const AccordionComponent: React.FC<AccordionComponentProps> = (props: AccordionComponentProps) => {
+export interface AccordionComponentState {
+    items: AccordionItem[];
+}
 
-  let [isOpened, setOpenState] = useState(false);
+export class AccordionComponent extends PureComponent<AccordionComponentProps, AccordionComponentState> {
 
-  return (
-    <main className={styles.accordion}>
-      {props.items.map(item => {
-        return (
-          <>
-            <section className={styles.head} onClick={() => setOpenState(isOpened = !isOpened)}>
-              <span className={styles.icon}>
-                {isOpened ?
-                  <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />
+    state: Readonly<AccordionComponentState> = {
+        items: []
+    };
+
+    componentDidMount() {
+        this.setState({items: this.props.items});
+    }
+
+    setComponentsState(index: number) {
+        // Close all but not on this index
+        this.setState(prevState => ({
+            items: [...prevState.items.map((item, _index) => {
+                if (index === _index) {
+                    item.isOpened = !item.isOpened;
+                } else {
+                    item.isOpened = false;
                 }
-              </span>
-              <span>
-                <h2>{item.title}</h2>
-              </span>
-            </section>
-            <section className={[styles.item, isOpened ? styles.opened : styles.hidden].join(' ')}>
-              {item.body.title &&
-                <h3>{item.body.title}</h3>
-              }
-              {item.body.element}
-            </section>
-          </>
+                return item;
+            })
+        ]
+        }));
+    }
+
+    render() {
+        return (
+            <>
+                {this.state.items.map((item: AccordionItem, index) => {
+                    return (
+                        <>
+                            <AccordionItemComponent
+                                key={index}
+                                isOpened={item.isOpened}
+                                config={item}
+                                onClick={() => {
+                                    this.setComponentsState(index)
+                                }} />
+                        </>
+                    )
+                })
+                }
+            </>
         )
-      })
-      }
-    </main>
-  )
+    }
 };
