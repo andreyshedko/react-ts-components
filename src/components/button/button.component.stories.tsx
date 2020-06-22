@@ -28,6 +28,13 @@ export const severityDanger = () =>
     text={"Test"}
     {...eventsFromNames} />
 
+export const buttonWithBadge = () =>
+  <ButtonComponent
+    severity="danger"
+    notification="3"
+    text={"Test"}
+    {...eventsFromNames} />
+
 export const withIcon = () =>
   <ButtonComponent
     icon={faCoffee}

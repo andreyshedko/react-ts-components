@@ -5,9 +5,9 @@
 - [x] Badge
 - [x] Button
 - [x] Card
+- [x] Badge Icon 
 
 ## In Progress
-- [ ] Badge Icon 
 
 - [ ] File Upload
 - [ ] Tabs

@@ -9,6 +9,7 @@ export interface ButtonComponentProps {
   severity: string;
   disabled?: boolean;
   icon?: IconDefinition;
+  notification?: string;
   onClick: (e: MouseEvent) => void;
   onKeyDown: (e: KeyboardEvent) => void;
   onFocus: (e: FocusEvent) => void;
@@ -27,5 +28,10 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
       <FontAwesomeIcon icon={props.icon} />
     }
     {props.text}
+    {props.notification &&
+        <span className={[styles.badge, styles[props.severity]].join(' ')}>
+          {props.notification}
+        </span>
+    }
   </button>
 );
