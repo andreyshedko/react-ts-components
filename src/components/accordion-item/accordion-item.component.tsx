@@ -1,7 +1,7 @@
 import React from "react";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './accordion-item.module.css';
+import styles from './accordion-item.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface AccordionItem {
@@ -38,11 +38,11 @@ export const AccordionItemComponent: React.FC<AccordionItemComponentProps> = (pr
             <h2>{props.config.title}</h2>
           </span>
         </section>
-        <section className={[styles.item, props.isOpened ? styles.opened : styles.hidden].join(' ')}>
+        <section className={[styles.item, props.isOpened ? styles.visible : styles.hidden].join(' ')}>
           {props.config.body.title &&
             <h3>{props.config.body.title}</h3>
           }
-          <div className={styles.item_body}>{props.config.body.element}</div>
+          <div className={styles.body}>{props.config.body.element}</div>
         </section>
       </>
     </main>

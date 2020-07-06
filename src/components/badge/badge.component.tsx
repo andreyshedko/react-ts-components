@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import styles from './badge.module.css';
+import styles from './badge.module.scss';
 
 export interface BadgeComponentProps {
   text: string;
@@ -13,7 +13,7 @@ export const BadgeComponent: React.FC<BadgeComponentProps> = (props: BadgeCompon
 
   return (
     <main
-      className={[styles.badge, styles[props.severity]].join(' ')}
+      className={[styles.badge, styles.info].join(' ')}
       onClick={(e: React.MouseEvent<HTMLButtonElement>): void => props.onClick(e as unknown as MouseEvent)}
       onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as unknown as KeyboardEvent)}>
       <section className={styles.body}>

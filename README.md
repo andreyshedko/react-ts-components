@@ -3,12 +3,15 @@
 ## Done
 - [x] Accordion
 - [x] Badge
+- [x] Badge Icon 
 - [x] Button
 - [x] Card
-- [x] Badge Icon 
 
 ## In Progress
 
+- [ ] Input Text
+
+- [ ] Autocomplete
 - [ ] File Upload
 - [ ] Tabs
 - [ ] Date Picker
@@ -18,7 +21,6 @@
 - [ ] Radio Button
 - [ ] Radio Button Group
 - [ ] Dropdown
-- [ ] Autocomplete
 - [ ] Toast
 - [ ] Modal Window
 - [ ] Spinner

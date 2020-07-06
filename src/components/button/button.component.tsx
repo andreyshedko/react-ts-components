@@ -2,7 +2,7 @@ import * as React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './button.module.css';
+import styles from './button.module.scss';
 
 export interface ButtonComponentProps {
   text: string;
@@ -18,7 +18,7 @@ export interface ButtonComponentProps {
 
 export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonComponentProps) => (
   <button
-    className={[styles.button, styles[props.severity]].join(' ')}
+    className={[styles.button, props.severity].join(' ')}
     onClick={(e: React.MouseEvent<HTMLButtonElement>): void => props.onClick(e as any)}
     onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as any)}
     onFocus={(e: React.FocusEvent<HTMLElement>): void => props.onFocus(e as any)}
@@ -29,7 +29,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
     }
     {props.text}
     {props.notification &&
-        <span className={[styles.badge, styles[props.severity]].join(' ')}>
+        <span className={[styles.badge, props.severity].join(' ')}>
           {props.notification}
         </span>
     }
