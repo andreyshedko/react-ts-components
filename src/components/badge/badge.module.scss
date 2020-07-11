@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import "../../variables";
 
 .badge {
     padding: $sm;
@@ -13,18 +13,18 @@
     user-select: none;
 
     .body {
-        color: $gray-3;
+        color: $default;
     }
 
-    .info {
+    &.info {
         background-color: $info;
     }
     
-    .warning {
+    &.warning {
         background-color: $warning;
     }
     
-    .danger {
+    &.danger {
         background-color: $danger;
     }
 }

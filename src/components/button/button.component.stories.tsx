@@ -13,32 +13,32 @@ const eventsFromNames = actions('onClick', 'onKeyDown', 'onFocus', 'onBlur');
 
 export const severityInfo = () =>
   <ButtonComponent
-    severity="info" text={"Test"}
+    severity={"info"} text={"Test"}
     {...eventsFromNames} />;
 
 export const severityWarning = () =>
   <ButtonComponent
-    severity="warning"
+    severity={"warning"}
     text={"Test"}
     {...eventsFromNames} />
 
 export const severityDanger = () =>
   <ButtonComponent
-    severity="danger"
+    severity={"danger"}
     text={"Test"}
     {...eventsFromNames} />
 
 export const buttonWithBadge = () =>
   <ButtonComponent
-    severity="danger"
-    notification="3"
+    severity={"danger"}
+    notification={"3"}
     text={"Test"}
     {...eventsFromNames} />
 
 export const withIcon = () =>
   <ButtonComponent
     icon={faCoffee}
-    severity="info"
+    severity={"info"}
     text={"Test"}
     {...eventsFromNames} />;
 

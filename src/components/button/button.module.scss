@@ -3,10 +3,10 @@
 .button {
     color: $gray-3;
     border: 1px solid $gray-1;
-    border-radius: calc($sm / 6);
-    padding: calc($sm / 2);
+    border-radius: $sm / 6;
+    padding: $sm / 2;
     cursor: pointer;
-    background-color: #fff;
+    background-color: $default;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -17,8 +17,8 @@
     }
 
     &:disabled {
-        color: var(--gray-1);
-        border: 1px solid var(--gray-1);
+        color: $gray-1;
+        border: 1px solid $gray-1;
     }
 
     &:disabled:hover {
@@ -29,54 +29,54 @@
         margin-right: .5rem;
     }
 
-    .warning {
-        color: var(--warning);
-        border: 1px solid var(--warning);
-        :focus {
-            outline: none;
-        }
-    }
-
-    .info {
-        color: var(--info);
-        border: 1px solid var(--info);
-        :focus {
-            outline: none;
-        }
-    }
-
-    .danger {
-        color: var(--danger);
-        border: 1px solid var(--danger);
+    & .warning {
+        color: $warning;
+        border: 1px solid $warning;
         &:focus {
             outline: none;
         }
     }
 
-    .with-icon svg {
+    & .info {
+        color: $info;
+        border: 1px solid $info;
+        :focus {
+            outline: none;
+        }
+    }
+
+    & .danger {
+        color: $danger;
+        border: 1px solid $danger;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & .with-icon svg {
         margin-right: 0.5rem;
     }
-}
 
-.button .badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    padding: 2px 5px;
-    border-color: #fff;
-    border-radius: 50%;
-    background-color: var(--info);
-    color: white;
-}
+    & .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 2px 5px;
+        border-color: $default;
+        border-radius: 50%;
+        background-color: $info;
+        color: $default;
 
-.button>.badge+.info {
-    background-color: var(--info);
-}
-
-.button>.badge+.warning {
-    background-color: var(--warning);
-}
-
-.button .badge .danger {
-    background-color: var(--danger);
+        > .info {
+            background-color: $info;
+        }
+    
+        > .warning {
+            background-color: $warning;
+        }
+    
+        > .danger {
+            background-color: $danger;
+        }
+    }
 }
