@@ -12,18 +12,18 @@ const eventsFromNames = actions('onClick', 'onKeyDown');
 
 export const severityInfo = () =>
     <BadgeComponent
-        severity="info"
-        text={"Test"}
+        severity={"info"}
+        text={""}
         {...eventsFromNames} />;
 
 export const severityWarning = () =>
     <BadgeComponent
-        severity="warning"
-        text={"Test"}
+        severity={"warning"}
+        text={""}
         {...eventsFromNames} />
 
 export const severityDanger = () =>
     <BadgeComponent
-        severity="danger"
-        text={"Test"}
+        severity={"danger"}
+        text={""}
         {...eventsFromNames} />

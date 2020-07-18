@@ -1,11 +1,9 @@
 import React from 'react';
 
-import styles from './App.module.scss';
-
 const App = () => {
   return (
-    <div className={styles.app}>
-      <header className={styles.header}>
+    <div>
+      <header>
         React TypeScript Components
       </header>
     </div>

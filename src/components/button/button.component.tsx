@@ -1,14 +1,12 @@
 import * as React from "react";
 
-import cx from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-
-import styles from './button.module.scss';
+import { Button, Notification } from './button.styled.component';
 
 export interface ButtonComponentProps {
   text: string;
-  severity: string;
+  severity: 'info' | 'warning' | 'danger';
   disabled?: boolean;
   icon?: IconDefinition;
   notification?: string;
@@ -18,19 +16,11 @@ export interface ButtonComponentProps {
   onBlur: (e: FocusEvent) => void;
 }
 
-const className = cx.bind(styles);
-
 export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonComponentProps) => {
 
-  const button_style = className(styles.button, {
-    warning: props.severity,
-    info: props.severity,
-    danger: props.severity
-  });
-
   return (
-  <button
-    className={button_style}
+  <Button
+    severity={props.severity}
     onClick={(e: React.MouseEvent<HTMLButtonElement>): void => props.onClick(e as any)}
     onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as any)}
     onFocus={(e: React.FocusEvent<HTMLElement>): void => props.onFocus(e as any)}
@@ -41,9 +31,11 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
     }
     {props.text}
     {props.notification &&
-        <span className={cx(styles.button, props.severity)}>
+        <Notification
+          disabled={props.disabled}
+          severity={props.severity}>
           {props.notification}
-        </span>
+        </Notification>
     }
-  </button>)
+  </Button>)
 };

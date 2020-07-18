@@ -1,7 +1,7 @@
 import React from "react";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './accordion-item.module.scss';
+import { Main, Head, Icon, Body, BodyElement } from './accordion-item.component.styled';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface AccordionItem {
@@ -22,29 +22,29 @@ export interface AccordionItemComponentProps {
 export const AccordionItemComponent: React.FC<AccordionItemComponentProps> = (props: AccordionItemComponentProps) => {
 
   return (
-    <main className={styles.accordion}>
-      <>
-        <section
-          className={styles.head}
+    <Main>
+        <Head
           onClick={() => {
             props.onClick();
           }}>
-          <span className={styles.icon}>
+          <Icon>
             {props.isOpened ?
               <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />
             }
-          </span>
+          </Icon>
           <span>
             <h2>{props.config.title}</h2>
           </span>
-        </section>
-        <section className={[styles.item, props.isOpened ? styles.visible : styles.hidden].join(' ')}>
+        </Head>
+        <Body
+          opened={props.isOpened}>
           {props.config.body.title &&
             <h3>{props.config.body.title}</h3>
           }
-          <div className={styles.body}>{props.config.body.element}</div>
-        </section>
-      </>
-    </main>
+          <BodyElement>
+            {props.config.body.element}
+          </BodyElement>
+        </Body>
+    </Main>
   )
 };

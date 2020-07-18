@@ -27,13 +27,13 @@ export const cardWithImage = () =>
   <CardComponent
     title={'Card without image'}
     body={utils.lorem}
-    imgUrl={'https://picsum.photos/200/300'} />;
+    imgUrl={'https://picsum.photos/300/300'} />;
 
 export const cardWithOneActionButton = () =>
   <CardComponent
     title={'Card with action abutton'}
     body={utils.lorem}
-    imgUrl={'https://picsum.photos/200/300'}>
+    imgUrl={'https://picsum.photos/300/300'}>
     <ButtonComponent
       text="Test"
       severity="info"
@@ -44,7 +44,7 @@ export const cardWithTwoActionButtons = () =>
   <CardComponent
     title={'Card without action button'}
     body={utils.lorem}
-    imgUrl={'https://picsum.photos/200/300'}>
+    imgUrl={'https://picsum.photos/300/300'}>
     <ButtonComponent
       text="Long Test"
       severity="info"
