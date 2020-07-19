@@ -6,11 +6,9 @@
 - [x] Badge Icon 
 - [x] Button
 - [x] Card
+- [x] Input Text
 
 ## In Progress
-
-- [ ] Input Text
-
 - [ ] Autocomplete
 - [ ] File Upload
 - [ ] Tabs

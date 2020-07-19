@@ -14,7 +14,7 @@ export const textInputComponent = () =>
   <InputComponent
     type={"text"}
     required={true}
-    value={"value"}
+    showClearIcon={true}
     {...eventsFromNames} />;
 
 export const disabledTextInputComponent = () =>
@@ -22,14 +22,12 @@ export const disabledTextInputComponent = () =>
     type={"text"}
     disabled={true}
     required={false}
-    value={"value"}
     {...eventsFromNames} />;
 
 export const errorStateTextInputComponent = () =>
   <InputComponent
     type={"text"}
     required={false}
-    value={"value"}
     isError={true}
     errorMessage={'Error Message'}
     {...eventsFromNames} />;
