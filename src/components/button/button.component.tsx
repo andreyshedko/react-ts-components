@@ -25,7 +25,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
     onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as any)}
     onFocus={(e: React.FocusEvent<HTMLElement>): void => props.onFocus(e as any)}
     onBlur={(e: React.FocusEvent<HTMLElement>): void => props.onBlur(e as any)}
-    disabled={props.disabled ?? false}>
+    disabled={props.disabled ? true : false}>
     {props.icon &&
       <FontAwesomeIcon icon={props.icon} />
     }

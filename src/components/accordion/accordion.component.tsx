@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-import { AccordionItemComponent, AccordionItem } from "../accordion-item/accordion-item.component";
+import { AccordionItemComponent, AccordionItem } from "../accordion.item/accordion.item.component";
 
 export interface AccordionComponentProps {
     items: AccordionItem[];
@@ -55,7 +55,7 @@ export class AccordionComponent extends PureComponent<AccordionComponentProps, A
                                 onClick={() => {
                                     this.setComponentsState(index)
                                 }}
-                                onKeyDown={(event) => {
+                                onKeyDown={(event: React.KeyboardEvent<HTMLElement>) => {
                                     this.handleKeydown(event, index)
                                 }} />
                         </>

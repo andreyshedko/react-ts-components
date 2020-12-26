@@ -45,7 +45,7 @@ export const accordionComponent = () =>
             title: 'Test Title 2',
             body: {
                 title: 'Body Title 2',
-                element: 'sasasasasasasass'
+                element: <>React Node</>
             },
             isOpened: false
         }

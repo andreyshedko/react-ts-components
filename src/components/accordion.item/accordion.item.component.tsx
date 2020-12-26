@@ -1,7 +1,7 @@
 import React from "react";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import { Main, Head, Title, Icon, Body, BodyElement } from './accordion-item.component.styled';
+import { Main, Head, Title, Icon, Body, BodyElement } from './accordion.item.component.styled';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface AccordionItem {

@@ -24,10 +24,18 @@ export const disabledTextInputComponent = () =>
     required={false}
     {...eventsFromNames} />;
 
+export const textInputComponentWithIcon = () =>
+  <InputComponent
+    type={"text"}
+    required={false}
+    showSpinner={true}
+    {...eventsFromNames} />;
+
 export const errorStateTextInputComponent = () =>
   <InputComponent
     type={"text"}
     required={false}
+    showClearIcon={true}
     isError={true}
     errorMessage={'Error Message'}
     {...eventsFromNames} />;

@@ -2,42 +2,42 @@
 
 exports[`Button Component should display danger severity state 1`] = `
 <main
-  className="badge danger"
+  className="sc-AxjAm oHVtP"
   onClick={[Function]}
   onKeyDown={[Function]}
 >
   <section
-    className="body"
+    className="sc-AxirZ ihGzgH"
   >
-    test
+    danger
   </section>
 </main>
 `;
 
 exports[`Button Component should display info severity state 1`] = `
 <main
-  className="badge info"
+  className="sc-AxjAm bFEgVV"
   onClick={[Function]}
   onKeyDown={[Function]}
 >
   <section
-    className="body"
+    className="sc-AxirZ ihGzgH"
   >
-    test
+    info
   </section>
 </main>
 `;
 
 exports[`Button Component should display warning severity state 1`] = `
 <main
-  className="badge warning"
+  className="sc-AxjAm jdLlxh"
   onClick={[Function]}
   onKeyDown={[Function]}
 >
   <section
-    className="body"
+    className="sc-AxirZ ihGzgH"
   >
-    test
+    warning
   </section>
 </main>
 `;

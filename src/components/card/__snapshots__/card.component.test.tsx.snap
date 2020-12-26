@@ -2,16 +2,16 @@
 
 exports[`Card Component should display default card 1`] = `
 <main
-  className="card"
+  className="sc-AxjAm fdGpbi"
 >
   <section
-    className="main"
+    className="sc-AxirZ cTQMYm"
   >
     <h3>
       test
     </h3>
     <div
-      className="body"
+      className="sc-AxiKw gSynnj"
     >
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </div>
@@ -21,14 +21,15 @@ exports[`Card Component should display default card 1`] = `
 
 exports[`Card Component should display image 1`] = `
 <main
-  className="card"
+  className="sc-AxjAm fdGpbi"
 >
   <img
     alt="test"
+    className="sc-AxhUy dkOVOu"
     src="https://picsum.photos/200/300"
   />
   <section
-    className="main"
+    className="sc-AxirZ cTQMYm"
   >
     <h3>
       test
@@ -37,7 +38,7 @@ exports[`Card Component should display image 1`] = `
       subtitle
     </h4>
     <div
-      className="body"
+      className="sc-AxiKw gSynnj"
     >
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </div>
@@ -45,12 +46,17 @@ exports[`Card Component should display image 1`] = `
 </main>
 `;
 
-exports[`Card Component should display subtitle card 1`] = `
+exports[`Card Component should display image and buttons 1`] = `
 <main
-  className="card"
+  className="sc-AxjAm fdGpbi"
 >
+  <img
+    alt="test"
+    className="sc-AxhUy dkOVOu"
+    src="https://picsum.photos/200/300"
+  />
   <section
-    className="main"
+    className="sc-AxirZ cTQMYm"
   >
     <h3>
       test
@@ -59,7 +65,53 @@ exports[`Card Component should display subtitle card 1`] = `
       subtitle
     </h4>
     <div
-      className="body"
+      className="sc-AxiKw gSynnj"
+    >
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div
+      className="sc-AxhCb cbwAaz"
+    >
+      <button
+        className="sc-AxgMl irUXHu"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        Long Test
+      </button>
+      <button
+        className="sc-AxgMl jUxzlu"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        Test
+      </button>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`Card Component should display subtitle card 1`] = `
+<main
+  className="sc-AxjAm fdGpbi"
+>
+  <section
+    className="sc-AxirZ cTQMYm"
+  >
+    <h3>
+      test
+    </h3>
+    <h4>
+      subtitle
+    </h4>
+    <div
+      className="sc-AxiKw gSynnj"
     >
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </div>
