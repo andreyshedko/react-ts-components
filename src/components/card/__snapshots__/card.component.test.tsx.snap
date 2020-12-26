@@ -3,6 +3,7 @@
 exports[`Card Component should display default card 1`] = `
 <main
   className="sc-AxjAm fdGpbi"
+  tabIndex={0}
 >
   <section
     className="sc-AxirZ cTQMYm"
@@ -22,6 +23,7 @@ exports[`Card Component should display default card 1`] = `
 exports[`Card Component should display image 1`] = `
 <main
   className="sc-AxjAm fdGpbi"
+  tabIndex={0}
 >
   <img
     alt="test"
@@ -49,6 +51,7 @@ exports[`Card Component should display image 1`] = `
 exports[`Card Component should display image and buttons 1`] = `
 <main
   className="sc-AxjAm fdGpbi"
+  tabIndex={0}
 >
   <img
     alt="test"
@@ -79,6 +82,7 @@ exports[`Card Component should display image and buttons 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        tabIndex={0}
       >
         Long Test
       </button>
@@ -89,6 +93,7 @@ exports[`Card Component should display image and buttons 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        tabIndex={0}
       >
         Test
       </button>
@@ -100,6 +105,7 @@ exports[`Card Component should display image and buttons 1`] = `
 exports[`Card Component should display subtitle card 1`] = `
 <main
   className="sc-AxjAm fdGpbi"
+  tabIndex={0}
 >
   <section
     className="sc-AxirZ cTQMYm"

@@ -20,6 +20,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = (props: ButtonCom
 
   return (
   <Button
+    tabIndex={0}
     severity={props.severity}
     onClick={(e: React.MouseEvent<HTMLButtonElement>): void => props.onClick(e as any)}
     onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as any)}

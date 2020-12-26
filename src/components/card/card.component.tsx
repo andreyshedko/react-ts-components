@@ -11,7 +11,7 @@ export interface CardComponentProps {
 }
 
 export const CardComponent: React.FC<CardComponentProps> = (props: CardComponentProps) => (
-    <Card>
+    <Card tabIndex={0}>
         {props.imgUrl &&
             <Image
                 src={props.imgUrl}

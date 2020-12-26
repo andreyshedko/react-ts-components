@@ -8,6 +8,7 @@ exports[`Button Component should display danger severity state 1`] = `
   onClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   test
 </button>
@@ -21,6 +22,7 @@ exports[`Button Component should display info severity state 1`] = `
   onClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   test
 </button>
@@ -34,6 +36,7 @@ exports[`Button Component should display warning severity state 1`] = `
   onClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   test
 </button>

@@ -47,6 +47,7 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
                 </CloseIconContainer>
             }
             <Input
+                tabIndex={0}
                 isError={props.isError}
                 value={value}
                 minLength={props.minlength || 1}

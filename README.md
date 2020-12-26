@@ -3,7 +3,6 @@
 ## Done
 - [x] Accordion
 - [x] Badge
-- [x] Badge Icon 
 - [x] Button
 - [x] Card
 - [x] Input Text
