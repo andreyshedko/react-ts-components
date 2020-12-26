@@ -73,7 +73,7 @@ exports[`Card Component should display image and buttons 1`] = `
       className="sc-AxhCb cbwAaz"
     >
       <button
-        className="sc-AxgMl irUXHu"
+        className="sc-AxgMl cBbAIO"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -83,7 +83,7 @@ exports[`Card Component should display image and buttons 1`] = `
         Long Test
       </button>
       <button
-        className="sc-AxgMl jUxzlu"
+        className="sc-AxgMl gLniQa"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}

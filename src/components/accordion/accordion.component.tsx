@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
-
-import { AccordionItemComponent, AccordionItem } from "../accordion.item/accordion.item.component";
+import { AccordionItem, AccordionItemComponent } from "../accordion.item/accordion.item.component";
 
 export interface AccordionComponentProps {
     items: AccordionItem[];

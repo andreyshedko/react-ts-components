@@ -2,7 +2,7 @@
 
 exports[`Button Component should display danger severity state 1`] = `
 <button
-  className="sc-AxjAm hJvhgo"
+  className="sc-AxjAm crnrqo"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -15,7 +15,7 @@ exports[`Button Component should display danger severity state 1`] = `
 
 exports[`Button Component should display info severity state 1`] = `
 <button
-  className="sc-AxjAm BNubK"
+  className="sc-AxjAm kOwkgy"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -28,7 +28,7 @@ exports[`Button Component should display info severity state 1`] = `
 
 exports[`Button Component should display warning severity state 1`] = `
 <button
-  className="sc-AxjAm cepVFK"
+  className="sc-AxjAm dJmiOO"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}

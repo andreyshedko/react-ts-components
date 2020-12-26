@@ -1,51 +1,26 @@
 import React from 'react';
 import { actions } from '@storybook/addon-actions';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { ButtonComponent } from './button.component';
+import { ButtonComponent, ButtonComponentProps } from './button.component';
 
 export default {
   component: ButtonComponent,
   title: 'Button Component',
-};
+  parameters: { actions: { argTypesRegex: '^on.*' } }
+} as Meta;
 
 const eventsFromNames = actions('onClick', 'onKeyDown', 'onFocus', 'onBlur');
 
-export const severityInfo = () =>
-  <ButtonComponent
-    severity={"info"} text={"Test"}
-    {...eventsFromNames} />;
+const Template: Story<ButtonComponentProps> = (args) => <ButtonComponent {...args} />;
 
-export const severityWarning = () =>
-  <ButtonComponent
-    severity={"warning"}
-    text={"Test"}
-    {...eventsFromNames} />
-
-export const severityDanger = () =>
-  <ButtonComponent
-    severity={"danger"}
-    text={"Test"}
-    {...eventsFromNames} />
-
-export const buttonWithBadge = () =>
-  <ButtonComponent
-    severity={"danger"}
-    notification={"3"}
-    text={"Test"}
-    {...eventsFromNames} />
+export const Button_Component = Template.bind({});
+Button_Component.args = {severity: "info", text: "Test"}
 
 export const withIcon = () =>
   <ButtonComponent
     icon={faCoffee}
     severity={"info"}
-    text={"Test"}
-    {...eventsFromNames} />;
-
-export const disabledButton = () =>
-  <ButtonComponent
-    icon={faCoffee}
-    severity="info"
-    disabled={true}
     text={"Test"}
     {...eventsFromNames} />;

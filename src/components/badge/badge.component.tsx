@@ -13,11 +13,12 @@ export const BadgeComponent: React.FC<BadgeComponentProps> = (props: BadgeCompon
 
   return (
     <Main
+      tabIndex={0}
       severity={props.severity}
       onClick={(e: React.MouseEvent<HTMLButtonElement>): void => props.onClick(e as unknown as MouseEvent)}
       onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => props.onKeyDown(e as unknown as KeyboardEvent)}>
       <Body>
-        {props.severity}
+        {props.text}
       </Body>
     </Main>
   )

@@ -1,38 +1,22 @@
 import React from 'react';
-import { AccordionComponent } from './accordion.component';
+import { actions } from '@storybook/addon-actions';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import {
-    Title,
-    Subtitle,
-    Description,
-    Primary,
-    ArgsTable,
-    Stories,
-    PRIMARY_STORY,
-} from '@storybook/addon-docs/blocks';
+import { AccordionComponent, AccordionComponentProps } from './accordion.component';
 
+const eventsFromNames = actions('onClick', 'onKeyDown');
 
 export default {
     component: AccordionComponent,
     title: 'Accordion Component',
-    parameters: {
-        docs: {
-            page: () => (
-                <>
-                    <Title />
-                    <Subtitle />
-                    <Description />
-                    <Primary />
-                    <ArgsTable story={PRIMARY_STORY} />
-                    <Stories />
-                </>
-            ),
-        }
-    },
-};
+    parameters: { actions: { argTypesRegex: '^on.*' } }
+} as Meta;
 
-export const accordionComponent = () =>
-    <AccordionComponent items={[
+const Template: Story<AccordionComponentProps> = (args) => <AccordionComponent {...args} />;
+
+export const Accordion_Component = Template.bind({});
+Accordion_Component.args = {
+    items: [
         {
             title: 'Test Title 1',
             body: {
@@ -49,4 +33,5 @@ export const accordionComponent = () =>
             },
             isOpened: false
         }
-    ]} />;
+    ]
+}

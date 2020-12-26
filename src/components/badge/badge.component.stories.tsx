@@ -1,29 +1,15 @@
 import React from 'react';
-import { actions } from '@storybook/addon-actions';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { BadgeComponent } from './badge.component';
+import { BadgeComponent, BadgeComponentProps } from './badge.component';
 
 export default {
     component: BadgeComponent,
     title: 'Badge Component',
-};
+    parameters: { actions: { argTypesRegex: '^on.*' } }
+} as Meta;
 
-const eventsFromNames = actions('onClick', 'onKeyDown');
+const Template: Story<BadgeComponentProps> = (args) => <BadgeComponent {...args} />;
 
-export const severityInfo = () =>
-    <BadgeComponent
-        severity={"info"}
-        text={""}
-        {...eventsFromNames} />;
-
-export const severityWarning = () =>
-    <BadgeComponent
-        severity={"warning"}
-        text={""}
-        {...eventsFromNames} />
-
-export const severityDanger = () =>
-    <BadgeComponent
-        severity={"danger"}
-        text={""}
-        {...eventsFromNames} />
+export const Badge_Component = Template.bind({});
+Badge_Component.args = {text: 'Test Text', severity: 'info'}

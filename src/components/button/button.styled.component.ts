@@ -14,7 +14,7 @@ const severity = new Map([
 
 export const Button = styled.button<NotificationProps>`
     color: #fff;
-    border: none;
+    border: 1px solid transparent;
     border-radius: calc(1rem / 6);
     padding: calc(1rem / 2);
     cursor: pointer;

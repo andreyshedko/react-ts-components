@@ -1,28 +1,21 @@
 import React from 'react';
 import { actions } from '@storybook/addon-actions';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { InputComponent } from './input.component';
+import { InputComponent, InputComponentProps } from './input.component';
 
 export default {
   component: InputComponent,
   title: 'Input Component',
-};
+  parameters: { actions: { argTypesRegex: '^on.*' } }
+} as Meta;
 
 const eventsFromNames = actions('onChange', 'onClick', 'onKeyDown', 'onFocus', 'onBlur', 'onKeyUp');
 
-export const textInputComponent = () =>
-  <InputComponent
-    type={"text"}
-    required={true}
-    showClearIcon={true}
-    {...eventsFromNames} />;
+const Template: Story<InputComponentProps> = (args) => <InputComponent {...args} />;
 
-export const disabledTextInputComponent = () =>
-  <InputComponent
-    type={"text"}
-    disabled={true}
-    required={false}
-    {...eventsFromNames} />;
+export const Input_Component = Template.bind({});
+Input_Component.args = {type: 'Text', required: true, showClearIcon: true}
 
 export const textInputComponentWithIcon = () =>
   <InputComponent

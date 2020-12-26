@@ -5,11 +5,12 @@ exports[`Button Component should display danger severity state 1`] = `
   className="sc-AxjAm oHVtP"
   onClick={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   <section
     className="sc-AxirZ ihGzgH"
   >
-    danger
+    test
   </section>
 </main>
 `;
@@ -19,11 +20,12 @@ exports[`Button Component should display info severity state 1`] = `
   className="sc-AxjAm bFEgVV"
   onClick={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   <section
     className="sc-AxirZ ihGzgH"
   >
-    info
+    test
   </section>
 </main>
 `;
@@ -33,11 +35,12 @@ exports[`Button Component should display warning severity state 1`] = `
   className="sc-AxjAm jdLlxh"
   onClick={[Function]}
   onKeyDown={[Function]}
+  tabIndex={0}
 >
   <section
     className="sc-AxirZ ihGzgH"
   >
-    warning
+    test
   </section>
 </main>
 `;

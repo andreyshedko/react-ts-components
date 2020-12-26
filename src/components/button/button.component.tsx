@@ -9,7 +9,7 @@ export interface ButtonComponentProps {
   severity: 'info' | 'warning' | 'danger';
   disabled?: boolean;
   icon?: IconDefinition;
-  notification?: string;
+  notification?: number;
   onClick: (e: MouseEvent) => void;
   onKeyDown: (e: KeyboardEvent) => void;
   onFocus: (e: FocusEvent) => void;
