@@ -1,7 +1,7 @@
 import React from "react";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import { Main, Head, Icon, Body, BodyElement } from './accordion-item.component.styled';
+import { Main, Head, Title, Icon, Body, BodyElement } from './accordion-item.component.styled';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface AccordionItem {
@@ -17,34 +17,41 @@ export interface AccordionItemComponentProps {
   config: AccordionItem;
   isOpened: boolean;
   onClick: () => void;
+  onKeyDown: (event: React.KeyboardEvent<HTMLElement>) => void;
 }
 
 export const AccordionItemComponent: React.FC<AccordionItemComponentProps> = (props: AccordionItemComponentProps) => {
 
   return (
-    <Main>
-        <Head
-          onClick={() => {
-            props.onClick();
+    <Main tabIndex={0}>
+      <Head
+        onClick={() => {
+          props.onClick();
+        }}
+        onKeyDown={(event) => {
+          props.onKeyDown(event as React.KeyboardEvent<HTMLElement>);
+        }}>
+        <Icon tabIndex={0}
+          onKeyDown={(event) => {
+            props.onKeyDown(event as React.KeyboardEvent<HTMLElement>);
           }}>
-          <Icon>
-            {props.isOpened ?
-              <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />
-            }
-          </Icon>
-          <span>
-            <h2>{props.config.title}</h2>
-          </span>
-        </Head>
-        <Body
-          opened={props.isOpened}>
-          {props.config.body.title &&
-            <h3>{props.config.body.title}</h3>
+          {props.isOpened ?
+            <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />
           }
-          <BodyElement>
-            {props.config.body.element}
-          </BodyElement>
-        </Body>
+        </Icon>
+        <Title>
+          {props.config.title}
+        </Title>
+      </Head>
+      <Body
+        opened={props.isOpened}>
+        {props.config.body.title &&
+          <h4>{props.config.body.title}</h4>
+        }
+        <BodyElement>
+          {props.config.body.element}
+        </BodyElement>
+      </Body>
     </Main>
   )
 };

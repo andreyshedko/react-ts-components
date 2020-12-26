@@ -7,6 +7,11 @@ type BodyProps = {
 export const Main = styled.main`
     width: 100%;
     font-family: "Open Sans", sans-serif;
+
+    &:focus {
+        outline: none;
+        background-color: #bbbbbb;
+    }
 `;
 
 export const Head = styled.section`
@@ -16,14 +21,27 @@ export const Head = styled.section`
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: center;
-    padding-left: 3px;
+    align-items: baseline;
+    padding-left: 5px;
     cursor: pointer;
 `;
 
+export const Title = styled.h3`
+margin-left: 5px;
+`;
+
 export const Icon = styled.span`
-    margin-right: 5px;
-    margin-left: 5px;
+    padding: 5px;
+
+    &:hover {
+        background-color: #bbbbbb;
+        border-radius: 3px;
+    }
+    &:focus {
+        outline: none;
+        background-color: #bbbbbb;
+        border-radius: 3px;
+    }
 `;
 
 export const Body = styled.section<BodyProps>`
@@ -36,4 +54,5 @@ export const Body = styled.section<BodyProps>`
 export const BodyElement = styled.div`
     max-width: calc(100% - 1rem);
     min-height: 1rem;
+    font-size: 14px;
 `;

@@ -17,7 +17,7 @@ export class AccordionComponent extends PureComponent<AccordionComponentProps, A
     };
 
     componentDidMount() {
-        this.setState({items: this.props.items});
+        this.setState({ items: this.props.items });
     }
 
     setComponentsState(index: number) {
@@ -31,8 +31,15 @@ export class AccordionComponent extends PureComponent<AccordionComponentProps, A
                 }
                 return item;
             })
-        ]
+            ]
         }));
+    }
+
+    handleKeydown(event: React.KeyboardEvent<HTMLElement>, index: number) {
+        if (event.key === 'Enter') {
+            this.setComponentsState(index);
+            event.stopPropagation();
+        }
     }
 
     render() {
@@ -47,6 +54,9 @@ export class AccordionComponent extends PureComponent<AccordionComponentProps, A
                                 config={item}
                                 onClick={() => {
                                     this.setComponentsState(index)
+                                }}
+                                onKeyDown={(event) => {
+                                    this.handleKeydown(event, index)
                                 }} />
                         </>
                     )

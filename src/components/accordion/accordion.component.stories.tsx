@@ -1,10 +1,34 @@
 import React from 'react';
 import { AccordionComponent } from './accordion.component';
 
+import {
+    Title,
+    Subtitle,
+    Description,
+    Primary,
+    ArgsTable,
+    Stories,
+    PRIMARY_STORY,
+} from '@storybook/addon-docs/blocks';
+
 
 export default {
     component: AccordionComponent,
     title: 'Accordion Component',
+    parameters: {
+        docs: {
+            page: () => (
+                <>
+                    <Title />
+                    <Subtitle />
+                    <Description />
+                    <Primary />
+                    <ArgsTable story={PRIMARY_STORY} />
+                    <Stories />
+                </>
+            ),
+        }
+    },
 };
 
 export const accordionComponent = () =>
