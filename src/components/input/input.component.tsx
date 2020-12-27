@@ -17,11 +17,11 @@ export interface InputComponentProps {
     isError?: boolean;
     errorMessage?: string;
     showClearIcon?: boolean;
-    onClick: (e: React.MouseEvent) => void;
-    onKeyUp: (value: string) => void;
-    onFocus: (e: React.FocusEvent) => void;
-    onBlur: (e: React.FocusEvent) => void;
-    onChange: (value: string) => void;
+    onClick?: (e: React.MouseEvent) => void;
+    onKeyUp?: (value: string) => void;
+    onFocus?: (e: React.FocusEvent) => void;
+    onBlur?: (e: React.FocusEvent) => void;
+    onChange?: (value: string) => void;
 }
 
 export const InputComponent: React.FC<InputComponentProps> = (props: InputComponentProps) => {

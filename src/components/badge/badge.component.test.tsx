@@ -16,8 +16,8 @@ describe("Button Component", () => {
       <BadgeComponent
         severity={"info"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }} />,
+        onClick={mockFn}
+        onKeyDown={mockFn} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -28,8 +28,8 @@ describe("Button Component", () => {
       <BadgeComponent
         severity={"warning"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }} />,
+        onClick={mockFn}
+        onKeyDown={mockFn} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -40,8 +40,8 @@ describe("Button Component", () => {
       <BadgeComponent
         severity={"danger"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }} />,
+        onClick={jest.fn()}
+        onKeyDown={jest.fn()} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe("Button Component", () => {
       severity={"danger"}
       text={"test"}
       onClick={mockFn}
-      onKeyDown={() => { }} />);
+      onKeyDown={mockFn} />);
     wrapper.simulate('click');
     expect(mockFn).toHaveBeenCalled();
   });
@@ -61,7 +61,7 @@ describe("Button Component", () => {
     const wrapper = shallow(<BadgeComponent
       severity={"danger"}
       text={"test"}
-      onClick={() => {}}
+      onClick={mockFn}
       onKeyDown={mockFn} />);
     wrapper.simulate('keydown');
     expect(mockFn).toHaveBeenCalled();

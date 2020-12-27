@@ -21,8 +21,8 @@ describe("Accordion Item Component", () => {
                     isOpened: false
                 }}
                 isOpened={false}
-                onClick={() => { }}
-                onKeyDown={() => { }}
+                onClick={jest.fn()}
+                onKeyDown={jest.fn()}
             />
         );
         let tree = component.toJSON();

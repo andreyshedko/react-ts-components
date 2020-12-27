@@ -16,10 +16,10 @@ describe("Button Component", () => {
       <ButtonComponent
         severity={"info"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }}
-        onFocus={() => { }}
-        onBlur={() => { }} />,
+        onClick={mockFn}
+        onKeyDown={mockFn}
+        onFocus={mockFn}
+        onBlur={mockFn} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -30,10 +30,10 @@ describe("Button Component", () => {
       <ButtonComponent
         severity={"warning"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }}
-        onFocus={() => { }}
-        onBlur={() => { }} />,
+        onClick={mockFn}
+        onKeyDown={mockFn}
+        onFocus={mockFn}
+        onBlur={mockFn} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -44,10 +44,10 @@ describe("Button Component", () => {
       <ButtonComponent
         severity={"danger"}
         text={"test"}
-        onClick={() => { }}
-        onKeyDown={() => { }}
-        onFocus={() => { }}
-        onBlur={() => { }} />,
+        onClick={mockFn}
+        onKeyDown={mockFn}
+        onFocus={mockFn}
+        onBlur={mockFn} />,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe("Button Component", () => {
       severity={"danger"}
       text={"test"}
       onClick={mockFn}
-      onKeyDown={() => { }}
-      onFocus={() => { }}
-      onBlur={() => { }} />);
+      onKeyDown={mockFn}
+      onFocus={mockFn}
+      onBlur={mockFn} />);
     wrapper.simulate('click');
     expect(mockFn).toHaveBeenCalled();
   });
@@ -71,8 +71,8 @@ describe("Button Component", () => {
       text={"test"}
       onClick={() => {}}
       onKeyDown={mockFn}
-      onFocus={() => { }}
-      onBlur={() => { }} />);
+      onFocus={mockFn}
+      onBlur={mockFn} />);
     wrapper.simulate('keydown');
     expect(mockFn).toHaveBeenCalled();
   });

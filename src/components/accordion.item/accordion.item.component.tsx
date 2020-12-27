@@ -16,7 +16,7 @@ export interface AccordionItem {
 export interface AccordionItemComponentProps {
   config: AccordionItem;
   isOpened: boolean;
-  onClick: () => void;
+  onClick: (event: React.MouseEvent<HTMLElement>) => void;
   onKeyDown: (event: React.KeyboardEvent<HTMLElement>) => void;
 }
 
@@ -25,8 +25,8 @@ export const AccordionItemComponent: React.FC<AccordionItemComponentProps> = (pr
   return (
     <Main tabIndex={0}>
       <Head
-        onClick={() => {
-          props.onClick();
+        onClick={(e) => {
+          props.onClick(e);
         }}
         onKeyDown={(event) => {
           props.onKeyDown(event as React.KeyboardEvent<HTMLElement>);
