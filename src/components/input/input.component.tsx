@@ -18,7 +18,7 @@ export interface InputComponentProps {
     errorMessage?: string;
     showClearIcon?: boolean;
     onClick?: (e: React.MouseEvent) => void;
-    onKeyUp?: (value: string) => void;
+    onKeyDown?: (event: React.KeyboardEvent) => void;
     onFocus?: (e: React.FocusEvent) => void;
     onBlur?: (e: React.FocusEvent) => void;
     onChange?: (value: string) => void;
@@ -40,7 +40,9 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
                     isError={props.isError}
                     onClick={() => {
                         changeValue(value = '');
-                        props.onChange(value);
+                        if (props && props.onChange) {
+                            props.onChange(value);
+                        }
                     }
                     }>
                     <FontAwesomeIcon icon={faTimes} />
@@ -57,13 +59,24 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
                 placeholder={props.placeholder || ''}
                 disabled={props.disabled || props.showSpinner || false}
                 onChange={(e) => {
-                    changeValue(e.target.value);
-                    props.onChange(value);
+                    if (props && props.onChange) {
+                        changeValue(e.target.value);
+                        props.onChange(e.target.value);
+                    }
                 }}
-                onFocus={(e) => props.onFocus(e)}
-                onClick={(e) => props.onClick(e)}
-                onKeyUp={(e) => {
-                    props.onKeyUp(value);
+                onFocus={(e) => {
+                    if (props && props.onFocus) {
+                        props.onFocus(e);
+                    }
+                }}
+                onClick={(e) => {
+                    if (props && props.onClick)
+                        props.onClick(e);
+                }}
+                onKeyDown={(event) => {
+                    if (props && props.onKeyDown) {
+                        props.onKeyDown(event);
+                    }
                 }}
             />
             {props.isError && props.errorMessage &&
