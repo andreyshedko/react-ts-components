@@ -6,23 +6,25 @@
 - [x] Button
 - [x] Card
 - [x] Input Text
+- [x] Autocomplete
 
 ## In Progress
-- [ ] Autocomplete
-- [ ] File Upload
-- [ ] Tabs
-- [ ] Date Picker
-- [ ] Time Picker
+- [ ] Chip
 - [ ] Checkbox
 - [ ] Checkbox Group
+- [ ] Date Picker
+- [ ] Dropdown
+- [ ] File Upload
+- [ ] Modal Window
+- [ ] Progress Bar
 - [ ] Radio Button
 - [ ] Radio Button Group
-- [ ] Dropdown
-- [ ] Toast
-- [ ] Modal Window
 - [ ] Spinner
-- [ ] Progress Bar
 - [ ] Sidebar
-- [ ] Toggle
 - [ ] Slider
-- [ ] Chip
+- [ ] Tabs
+- [ ] Time Picker
+- [ ] Toast
+- [ ] Toggle
+
+
