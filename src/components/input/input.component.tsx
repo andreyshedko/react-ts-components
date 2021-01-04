@@ -8,20 +8,23 @@ import { Container, Input, IconContainer, ErrorMessageContainer, CloseIconContai
 export interface InputComponentProps {
     type: string;
     required: boolean;
+    name: string;
     minlength?: number;
     maxlength?: number;
     placeholder?: string;
     disabled?: boolean;
-    showSpinner?: boolean;
+    showSpinnerIcon?: boolean;
     styles?: string;
     isError?: boolean;
     errorMessage?: string;
     showClearIcon?: boolean;
+    value?: string;
     onClick?: (e: React.MouseEvent) => void;
     onKeyDown?: (event: React.KeyboardEvent) => void;
     onFocus?: (e: React.FocusEvent) => void;
     onBlur?: (e: React.FocusEvent) => void;
     onChange?: (value: string) => void;
+    onClear?: () => void;
 }
 
 export const InputComponent: React.FC<InputComponentProps> = (props: InputComponentProps) => {
@@ -30,7 +33,7 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
 
     return (
         <Container>
-            {props.showSpinner &&
+            {props.showSpinnerIcon &&
                 <IconContainer>
                     <FontAwesomeIcon icon={faCircleNotch} spin />
                 </IconContainer>
@@ -40,8 +43,9 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
                     isError={props.isError}
                     onClick={() => {
                         changeValue(value = '');
-                        if (props && props.onChange) {
+                        if (props && props.onChange && props.onClear) {
                             props.onChange(value);
+                            props.onClear();
                         }
                     }
                     }>
@@ -51,17 +55,17 @@ export const InputComponent: React.FC<InputComponentProps> = (props: InputCompon
             <Input
                 tabIndex={0}
                 isError={props.isError}
-                value={value}
+                value={props.value || value}
                 minLength={props.minlength || 1}
                 maxLength={props.maxlength || 100}
                 required={props.required || false}
                 type={props.type}
                 placeholder={props.placeholder || ''}
-                disabled={props.disabled || props.showSpinner || false}
+                disabled={props.disabled || props.showSpinnerIcon || false}
                 onChange={(e) => {
                     if (props && props.onChange) {
-                        changeValue(e.target.value);
                         props.onChange(e.target.value);
+                        changeValue(e.target.value);
                     }
                 }}
                 onFocus={(e) => {

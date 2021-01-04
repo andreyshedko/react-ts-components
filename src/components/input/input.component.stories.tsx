@@ -20,13 +20,15 @@ Input_Component.args = {type: 'Text', required: true, showClearIcon: true}
 export const textInputComponentWithIcon = () =>
   <InputComponent
     type={"text"}
+    name={'test'}
     required={false}
-    showSpinner={true}
+    showSpinnerIcon={true}
     {...eventsFromNames} />;
 
 export const errorStateTextInputComponent = () =>
   <InputComponent
     type={"text"}
+    name={'test'}
     required={false}
     showClearIcon={true}
     isError={true}

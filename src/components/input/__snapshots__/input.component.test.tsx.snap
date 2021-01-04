@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component should display component 1`] = `
+<section
+  className="sc-AxjAm kMCKjL"
+>
+  <input
+    className="sc-AxirZ kquce"
+    disabled={false}
+    maxLength={100}
+    minLength={1}
+    onChange={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    required={true}
+    tabIndex={0}
+    type="text"
+    value=""
+  />
+</section>
+`;
